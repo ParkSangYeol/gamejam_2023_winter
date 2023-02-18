@@ -4,12 +4,14 @@ using UnityEngine;
 
 public abstract class Puzzle : MonoBehaviour
 {
-    float allottedTime;
+    protected float allottedTime;
+
+    protected abstract void CalculateAllottedTime();
 
     public float GetAllottedTime()
     {
         return allottedTime;
     }
 
-    public abstract void DeployExplosive();
+    public abstract void PuzzleInit();
 }
