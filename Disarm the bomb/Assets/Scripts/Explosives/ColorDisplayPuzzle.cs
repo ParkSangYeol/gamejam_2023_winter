@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColorDisplayPuzzle : Puzzle
 {
-    public override void DeployExplosive()
+    public override void PuzzleInit()
     {
         return;
     }

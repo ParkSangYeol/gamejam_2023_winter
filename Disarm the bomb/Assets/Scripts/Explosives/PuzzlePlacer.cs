@@ -48,6 +48,12 @@ public class PuzzlePlacer : MonoBehaviour
         lineModules[randomIndex].SetActive(true);
         
         ExtractPuzzleComponent(lineModules[randomIndex]);
+
+        // Puzzle Init
+        foreach(var puzzle in puzzles)
+        {
+            puzzle.PuzzleInit();
+        }
     }
 
     private void ExtractPuzzleComponent(GameObject obj)

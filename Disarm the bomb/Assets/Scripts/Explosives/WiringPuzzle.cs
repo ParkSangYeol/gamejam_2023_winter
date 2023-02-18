@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WiringPuzzle : Puzzle
 {
-    public override void DeployExplosive()
+    public override void PuzzleInit()
     {
         return;
     }
