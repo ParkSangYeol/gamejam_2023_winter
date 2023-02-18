@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PuzzleFactory : MonoBehaviour
+public abstract class Puzzle : MonoBehaviour
 {
     float allottedTime;
 

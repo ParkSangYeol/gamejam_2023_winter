@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingleButtonFactory : PuzzleFactory
+public class WiringPuzzle : Puzzle
 {
     public override void DeployExplosive()
     {
