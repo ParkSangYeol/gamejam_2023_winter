@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuEventHandler : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MainMenuEventHandler : MonoBehaviour
     public void OnStartGameButtonClick()
     {
         // Move Scene to Disarm the Bomb
+        SceneManager.LoadScene("Circuit");
     }
 
     public void OnOpenOptionButtonClick()
