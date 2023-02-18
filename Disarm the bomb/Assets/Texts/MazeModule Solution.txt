@@ -2,7 +2,7 @@
 파란색 사각형 - > 검은색 삼각형	druurdd
 노란색 원 -> 녹색 원			ddddlluru
 빨간 삼각형 -> 노란색 사각형		rulul
-파란색 -> 보라색 사각형		ldrddll
+파란색 삼각형 -> 보라색 사각형		ldrddll
 녹색 사각형 -> 파란색 원		rrurull
 보라색 원 -> 빨간 사각형		rddr
 검은색 사각형 -> 보라색 삼각형	rddruu
