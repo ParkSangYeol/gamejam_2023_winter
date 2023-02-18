@@ -8,4 +8,8 @@ public class ColorDisplayPuzzle : Puzzle
     {
         return;
     }
+
+    protected override void CalculateAllottedTime()
+    {
+    }
 }

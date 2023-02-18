@@ -8,4 +8,8 @@ public class CharacterButtonPuzzle : Puzzle
     {
         return;
     }
+
+    protected override void CalculateAllottedTime()
+    {
+    }
 }

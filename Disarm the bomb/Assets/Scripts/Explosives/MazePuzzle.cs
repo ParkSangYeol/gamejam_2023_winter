@@ -8,4 +8,8 @@ public class MazePuzzle : Puzzle
     {
         return;
     }
+
+    protected override void CalculateAllottedTime()
+    {
+    }
 }

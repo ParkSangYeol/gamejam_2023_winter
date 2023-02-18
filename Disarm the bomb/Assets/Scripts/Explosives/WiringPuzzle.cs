@@ -8,4 +8,8 @@ public class WiringPuzzle : Puzzle
     {
         return;
     }
+
+    protected override void CalculateAllottedTime()
+    {
+    }
 }
