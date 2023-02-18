@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterButtonFactory : ExplosiveFactory
+public class CharacterButtonFactory : PuzzleFactory
 {
-    public CharacterButtonFactory(Vector3 deploymentPlace) : base(deploymentPlace) {}
-
     public override void DeployExplosive()
     {
         return;

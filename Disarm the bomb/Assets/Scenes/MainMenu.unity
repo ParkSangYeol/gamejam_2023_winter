@@ -986,7 +986,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1769252951}
         m_TargetAssemblyTypeName: MainMenuEventHandler, Assembly-CSharp
-        m_MethodName: OnCloseOptionButtonClick
+        m_MethodName: OnCloseTutorialButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

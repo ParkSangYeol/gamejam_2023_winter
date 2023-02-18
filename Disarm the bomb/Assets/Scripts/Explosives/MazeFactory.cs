@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeFactory : ExplosiveFactory
+public class MazeFactory : PuzzleFactory
 {
-    public MazeFactory(Vector3 deploymentPlace) : base(deploymentPlace) {}
-
     public override void DeployExplosive()
     {
         return;

@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimerFactory : ExplosiveFactory
+public class TimerFactory : PuzzleFactory
 {
-    public TimerFactory(Vector3 deploymentPlace) : base(deploymentPlace) {}
-
     public override void DeployExplosive()
     {
         return;
