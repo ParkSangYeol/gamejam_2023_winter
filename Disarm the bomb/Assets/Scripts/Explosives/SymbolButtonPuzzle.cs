@@ -6,7 +6,7 @@ using TMPro;
 public class SymbolButtonPuzzle : Puzzle
 {
     private static readonly List<string> CharactersByLevel = new List<string>{"ξψ‡¤ĦÞŦДЮБÆζ‰ЩЖ", "æ§¶ß∞ЁΓø", "đŧł"};
-    private static readonly List<string> CharactersByGroup = new List<string>{"ξψ‡đæ§¶ß", "¤ĦÞđŧ§∞ø", "ŦДЮđłæЁΓ", "БÆζŧł¶∞Γ", "‰ЩЖŧłßЁø"};
+    private static readonly List<string> CharactersByGroup = new List<string>{ "ßđξ§‡æψ¶", "Þŧ¤øĦđ§∞", "ΓŦłЁđЮæД", "Æ∞БŧΓł¶ζ", "łЩЁЖ‰ŧøß" };
     private string displayedText = "";
     private string selectedString;
     private int levelSum = 0;
