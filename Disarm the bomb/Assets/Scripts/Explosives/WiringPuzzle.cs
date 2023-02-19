@@ -86,6 +86,7 @@ public class WiringPuzzle : Puzzle
             solvedPuzzleCount++;
 
             LEDProgressor.instance.PuzzleSolved();
+            EffectSoundManager.instance.playBeepAudioClip();
         }
         else
         {
@@ -93,6 +94,8 @@ public class WiringPuzzle : Puzzle
             print("Fail");
             
             LEDProgressor.instance.PuzzleFailed();
+
+            EffectSoundManager.instance.playWarningAudioClip();
         }
         checkUnavailable = true;
     }

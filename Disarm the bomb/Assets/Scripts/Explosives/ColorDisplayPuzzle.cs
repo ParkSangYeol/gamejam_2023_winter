@@ -105,6 +105,7 @@ public class ColorDisplayPuzzle : Puzzle
                 
                 solvedPuzzleCount++;
                 LEDProgressor.instance.PuzzleSolved();
+                EffectSoundManager.instance.playBeepAudioClip();
 
             }
         }
@@ -114,6 +115,8 @@ public class ColorDisplayPuzzle : Puzzle
             print("Fail");
             checkUnavailable = true;
             LEDProgressor.instance.PuzzleFailed();
+
+            EffectSoundManager.instance.playWarningAudioClip();
         }
     }
 }

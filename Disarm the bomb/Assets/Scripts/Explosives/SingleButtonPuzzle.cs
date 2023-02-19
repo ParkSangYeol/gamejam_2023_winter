@@ -58,6 +58,7 @@ public class SingleButtonPuzzle : Puzzle
             solvedPuzzleCount++;
             
             LEDProgressor.instance.PuzzleSolved();
+            EffectSoundManager.instance.playBeepAudioClip();
         }
         else
         {
@@ -65,6 +66,8 @@ public class SingleButtonPuzzle : Puzzle
             print("Fail");
             
             LEDProgressor.instance.PuzzleFailed();
+
+            EffectSoundManager.instance.playWarningAudioClip();
         }
         checkUnavailable = true;
     }

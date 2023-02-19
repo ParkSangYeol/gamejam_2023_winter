@@ -69,6 +69,8 @@ public class CharacterButtonPuzzle : Puzzle
                 solvedPuzzleCount++;
 
                 LEDProgressor.instance.PuzzleSolved();
+
+                EffectSoundManager.instance.playBeepAudioClip();
             }
         }
         else
@@ -78,6 +80,9 @@ public class CharacterButtonPuzzle : Puzzle
             checkUnavailable = true;
 
             LEDProgressor.instance.PuzzleFailed();
+            
+
+            EffectSoundManager.instance.playWarningAudioClip();
         }
     }
 }

@@ -74,6 +74,7 @@ public class SymbolButtonPuzzle : Puzzle
                 solvedPuzzleCount++;
                 
                 LEDProgressor.instance.PuzzleSolved();
+                EffectSoundManager.instance.playBeepAudioClip();
             }
         }
         else
@@ -83,6 +84,8 @@ public class SymbolButtonPuzzle : Puzzle
             checkUnavailable = true;
 
             LEDProgressor.instance.PuzzleFailed();
+
+            EffectSoundManager.instance.playWarningAudioClip();
         }
     }
 }

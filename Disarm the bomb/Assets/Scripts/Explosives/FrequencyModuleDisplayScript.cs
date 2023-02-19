@@ -117,6 +117,7 @@ public class FrequencyModuleDisplayScript : Puzzle
             solvedPuzzleCount++;
             
             LEDProgressor.instance.PuzzleSolved();
+            EffectSoundManager.instance.playBeepAudioClip();
         }
         else
         {
@@ -125,6 +126,8 @@ public class FrequencyModuleDisplayScript : Puzzle
             checkUnavailable = true;
             
             LEDProgressor.instance.PuzzleFailed();
+
+            EffectSoundManager.instance.playWarningAudioClip();
         }
     }
 }

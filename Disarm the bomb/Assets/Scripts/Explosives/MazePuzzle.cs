@@ -45,6 +45,7 @@ public class MazePuzzle : Puzzle
                 
                 solvedPuzzleCount++;
                 LEDProgressor.instance.PuzzleSolved();
+                EffectSoundManager.instance.playBeepAudioClip();
             }
         }
         else
@@ -53,6 +54,8 @@ public class MazePuzzle : Puzzle
             print("Fail");
             checkUnavailable = true;
             LEDProgressor.instance.PuzzleFailed();
+
+            EffectSoundManager.instance.playWarningAudioClip();
         }
     }
 }
