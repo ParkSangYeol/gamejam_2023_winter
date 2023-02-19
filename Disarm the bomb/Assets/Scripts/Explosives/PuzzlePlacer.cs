@@ -13,6 +13,8 @@ public class PuzzlePlacer : MonoBehaviour
     private List<GameObject> chipModules;
     [SerializeField]
     private List<GameObject> lineModules;
+    [SerializeField]
+    private List<GameObject> frequencYModules;
     private static List<Puzzle> puzzles = new List<Puzzle>();
     public static int GetPuzzleCount() { return puzzles.Count; }
 
@@ -45,10 +47,12 @@ public class PuzzlePlacer : MonoBehaviour
         }
 
         // Line Placement
-        randomIndex = Random.Range(0, lineModules.Count);
+        randomIndex = Random.Range(0, 2);
         lineModules[randomIndex].SetActive(true);
+        frequencYModules[randomIndex].SetActive(true);
         
         ExtractPuzzleComponent(lineModules[randomIndex]);
+        ExtractPuzzleComponent(frequencYModules[randomIndex]);
 
         // Puzzle Init
         foreach(var puzzle in puzzles)
