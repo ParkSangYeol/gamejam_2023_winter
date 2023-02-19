@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
                 sec = '0' + sec;
             }
             timeText = min + ":" + sec;
-            Debug.Log(timeText);
+            // Debug.Log(timeText);
             m_text.text = timeText;
             if (!isCountDown && timeText == "0:01")
             {
