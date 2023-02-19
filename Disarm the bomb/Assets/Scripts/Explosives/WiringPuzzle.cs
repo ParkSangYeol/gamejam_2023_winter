@@ -6,6 +6,8 @@ public class WiringPuzzle : Puzzle
 {
     [SerializeField]
     private List<Material> materialList;
+    [SerializeField]
+    private List<GameObject> lines;
     private enum ColorName { Red, Green, Blue, Yellow };
     private static readonly Dictionary<int, List<(List<ColorName>, int)>> answerSet = new Dictionary<int, List<(List<ColorName>, int)>>{
         {3, new List<(List<ColorName>, int)>{
@@ -35,25 +37,57 @@ public class WiringPuzzle : Puzzle
             (new List<ColorName>{ColorName.Blue, ColorName.Yellow, ColorName.Green, ColorName.Green, ColorName.Red, ColorName.Blue}, 6),
             (new List<ColorName>{ColorName.Green, ColorName.Green, ColorName.Red, ColorName.Red, ColorName.Yellow, ColorName.Yellow}, 6)}}
     };
+    int lineNumber;
     private List<ColorName> displayedLineSet;
     private int answer;
 
     public override void PuzzleInit()
     {
-        int lineNumber = Random.Range(3, 7);
+        lineNumber = Random.Range(3, 7);
         List<(List<ColorName>, int)> answerCandidate = answerSet[lineNumber];
         int randomIndex = Random.Range(0, answerCandidate.Count);
         displayedLineSet = answerCandidate[randomIndex].Item1;
         answer = answerCandidate[randomIndex].Item2;
         print("Line : " + answer);
+
+        int i = 0;
+        for(; i < lineNumber; i++)
+        {
+            MeshRenderer[] lineMeshes = lines[i].transform.GetChild(0).GetComponentsInChildren<MeshRenderer>();
+            foreach(var mesh in lineMeshes)
+            {
+                if(mesh.transform.childCount != 0) continue;
+                mesh.material = materialList[((int)displayedLineSet[i])];
+            }
+        }
+
+        for(; i < 6; i++)
+        {
+            lines[i].SetActive(false);
+        }
+
+        CalculateAllottedTime();
     }
 
     protected override void CalculateAllottedTime()
     {
+        allottedTime = 10f * lineNumber;
     }
 
     public override void CheckAnswer(string text)
     {
-        throw new System.NotImplementedException();
+        if(checkUnavailable) return;
+        
+        if(int.Parse(text) == answer)
+        {
+            // clear
+            print("Clear");
+        }
+        else
+        {
+            //fail
+            print("Fail");
+        }
+        checkUnavailable = true;
     }
 }

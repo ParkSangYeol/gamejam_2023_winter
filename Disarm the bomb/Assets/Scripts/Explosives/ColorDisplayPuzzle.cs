@@ -31,19 +31,22 @@ public class ColorDisplayPuzzle : Puzzle
             (new List<ColorName>{ColorName.Green, ColorName.Purple, ColorName.Orange, ColorName.Pink, ColorName.Cyan, ColorName.Red}, new List<int>{3, 4, 1, 2}),
             (new List<ColorName>{ColorName.Purple, ColorName.Cyan, ColorName.Green, ColorName.Red, ColorName.Orange, ColorName.Pink}, new List<int>{3, 4, 1, 2})}}
     };
+    int colorNumber;
     private List<ColorName> displayedColorSet;
     private List<int> answer;
     private float displayInterval = 0.6f;
 
     public override void PuzzleInit()
     {
-        int colorNumber = Random.Range(4, 7);
+        colorNumber = Random.Range(4, 7);
         List<(List<ColorName>, List<int>)> answerCandidate = answerSet[colorNumber];
         int randomIndex = Random.Range(0, answerCandidate.Count);
         displayedColorSet = answerCandidate[randomIndex].Item1;
         answer = answerCandidate[randomIndex].Item2;
         print("Color Display : " + answer[0] + " " + answer[1] + " " + answer[2] + " "  + answer[3]);
         StartCoroutine(ColorChanger());
+
+        CalculateAllottedTime();
     }
 
     private IEnumerator ColorChanger()
@@ -84,6 +87,7 @@ public class ColorDisplayPuzzle : Puzzle
 
     protected override void CalculateAllottedTime()
     {
+        allottedTime = 10f + colorNumber * 5f;
     }
 
     public override void CheckAnswer(string text)

@@ -45,6 +45,8 @@ public class SymbolButtonPuzzle : Puzzle
 
         selectedString = CharactersByGroup[randomGroupIndex];
         answer.Sort();
+
+        CalculateAllottedTime();
     }
 
     protected override void CalculateAllottedTime()

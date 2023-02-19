@@ -17,7 +17,7 @@ public abstract class PuzzleButton : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Parent has no SymbolButtonPuzzle Component!");
+            Debug.LogError("Parent has no Puzzle Component!");
             return null;
         }
     }

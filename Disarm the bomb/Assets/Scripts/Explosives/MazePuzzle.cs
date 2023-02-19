@@ -21,10 +21,13 @@ public class MazePuzzle : Puzzle
         image.sprite = figures[randomFigureIndex];
         answer = DicForAnswer[figures[randomFigureIndex].name];
         print(answer);
+
+        CalculateAllottedTime();
     }
 
     protected override void CalculateAllottedTime()
     {
+        allottedTime = 3f * answer.Length;
     }
 
     public override void CheckAnswer(string key)

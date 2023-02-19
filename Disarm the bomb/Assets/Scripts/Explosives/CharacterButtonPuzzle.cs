@@ -32,11 +32,13 @@ public class CharacterButtonPuzzle : Puzzle
             buttons[i].PutText(shuffledString[i].ToString());
         }
         print(answerSet.Item1);
+
+        CalculateAllottedTime();
     }
 
     protected override void CalculateAllottedTime()
     {
-        
+        allottedTime = 40f;
     }
 
     public static string ShuffleString(string str)
