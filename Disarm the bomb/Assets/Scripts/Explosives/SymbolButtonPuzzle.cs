@@ -72,6 +72,8 @@ public class SymbolButtonPuzzle : Puzzle
                 checkUnavailable = true;
                 
                 solvedPuzzleCount++;
+                
+                LEDProgressor.instance.PuzzleSolved();
             }
         }
         else
@@ -79,6 +81,8 @@ public class SymbolButtonPuzzle : Puzzle
             //fail
             print("Fail");
             checkUnavailable = true;
+
+            LEDProgressor.instance.PuzzleFailed();
         }
     }
 }

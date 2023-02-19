@@ -60,7 +60,6 @@ public class CharacterButtonPuzzle : Puzzle
         if(text[0] == answer[0])
         {
             answer = answer.Remove(0, 1);
-            print("Pass");
             if(answer.Length == 0)
             {
                 // clear
@@ -68,6 +67,8 @@ public class CharacterButtonPuzzle : Puzzle
                 checkUnavailable = true;
 
                 solvedPuzzleCount++;
+
+                LEDProgressor.instance.PuzzleSolved();
             }
         }
         else
@@ -75,6 +76,8 @@ public class CharacterButtonPuzzle : Puzzle
             //fail
             print("Fail");
             checkUnavailable = true;
+
+            LEDProgressor.instance.PuzzleFailed();
         }
     }
 }

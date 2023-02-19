@@ -97,7 +97,6 @@ public class ColorDisplayPuzzle : Puzzle
         if(int.Parse(text) == answer[0])
         {
             answer.RemoveAt(0);
-            print("Pass");
             if(answer.Count == 0)
             {
                 // clear
@@ -105,6 +104,8 @@ public class ColorDisplayPuzzle : Puzzle
                 checkUnavailable = true;
                 
                 solvedPuzzleCount++;
+                LEDProgressor.instance.PuzzleSolved();
+
             }
         }
         else
@@ -112,6 +113,7 @@ public class ColorDisplayPuzzle : Puzzle
             //fail
             print("Fail");
             checkUnavailable = true;
+            LEDProgressor.instance.PuzzleFailed();
         }
     }
 }

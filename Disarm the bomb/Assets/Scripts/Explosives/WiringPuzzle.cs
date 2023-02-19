@@ -84,11 +84,15 @@ public class WiringPuzzle : Puzzle
             print("Clear");
             
             solvedPuzzleCount++;
+
+            LEDProgressor.instance.PuzzleSolved();
         }
         else
         {
             //fail
             print("Fail");
+            
+            LEDProgressor.instance.PuzzleFailed();
         }
         checkUnavailable = true;
     }

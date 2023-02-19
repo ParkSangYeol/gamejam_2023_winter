@@ -56,11 +56,15 @@ public class SingleButtonPuzzle : Puzzle
             print("CLear");
 
             solvedPuzzleCount++;
+            
+            LEDProgressor.instance.PuzzleSolved();
         }
         else
         {
             // Fail
             print("Fail");
+            
+            LEDProgressor.instance.PuzzleFailed();
         }
         checkUnavailable = true;
     }
