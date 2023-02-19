@@ -82,6 +82,8 @@ public class WiringPuzzle : Puzzle
         {
             // clear
             print("Clear");
+            
+            solvedPuzzleCount++;
         }
         else
         {

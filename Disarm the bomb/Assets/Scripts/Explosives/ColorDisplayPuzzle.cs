@@ -103,6 +103,8 @@ public class ColorDisplayPuzzle : Puzzle
                 // clear
                 print("Clear");
                 checkUnavailable = true;
+                
+                solvedPuzzleCount++;
             }
         }
         else
