@@ -53,10 +53,10 @@ public class WiringPuzzle : Puzzle
         int i = 0;
         for(; i < lineNumber; i++)
         {
-            print(i);
             MeshRenderer[] lineMeshes = lines[i].transform.GetChild(0).GetComponentsInChildren<MeshRenderer>();
             foreach(var mesh in lineMeshes)
             {
+                if(mesh.transform.childCount != 0) continue;
                 mesh.material = materialList[((int)displayedLineSet[i])];
             }
         }
