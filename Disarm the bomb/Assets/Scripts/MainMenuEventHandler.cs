@@ -13,6 +13,7 @@ public class MainMenuEventHandler : MonoBehaviour
     public void OnStartGameButtonClick()
     {
         // Move Scene to Disarm the Bomb
+        SoundManagerScript.instance.changeMusicToGameScene();
         SceneManager.LoadScene("Circuit");
     }
 
