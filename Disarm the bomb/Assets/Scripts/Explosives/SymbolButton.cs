@@ -10,8 +10,10 @@ public class SymbolButton : PuzzleButton
 
     private void OnMouseDown() 
     {
-        StartCoroutine(ButtonDown<SymbolButtonPuzzle>());
+        if(isPuzzleUnavailable<SymbolButtonPuzzle>()) return;
 
+        StartCoroutine(ButtonDown<SymbolButtonPuzzle>());
+        PlayEffectSound();
         RequestCheckAnswer<SymbolButtonPuzzle>(text.text);
     }
 }

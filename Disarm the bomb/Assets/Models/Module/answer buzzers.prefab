@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d46364d5882a548b55e8fe4c0ccba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkUnavailable: 0
 --- !u!1 &783058459668998117
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +477,8 @@ GameObject:
   - component: {fileID: 859453486786522664}
   - component: {fileID: 2546107615103244125}
   - component: {fileID: 5067833429890768737}
+  - component: {fileID: 7359319778325711831}
+  - component: {fileID: 1744008213241037331}
   m_Layer: 0
   m_Name: answer_buzzers_05
   m_TagString: Untagged
@@ -548,3 +551,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7359319778325711831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387622937040663950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145ffad9a0a48ce45ba121c7b7c3e620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 0}
+  pressedStateMaterials: {fileID: 0}
+--- !u!136 &1744008213241037331
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387622937040663950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.061617218
+  m_Height: 0.04058879
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.00000000655098, z: -0.005062274}

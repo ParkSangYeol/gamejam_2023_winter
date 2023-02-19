@@ -10,8 +10,10 @@ public class ColorDisplayButton : PuzzleButton
 
     private void OnMouseDown() 
     {
+        if(isPuzzleUnavailable<ColorDisplayPuzzle>()) return;
+        
         StartCoroutine(ButtonDown<ColorDisplayPuzzle>());
-
+        PlayEffectSound();
         RequestCheckAnswer<ColorDisplayPuzzle>(text.text);
     }
 }

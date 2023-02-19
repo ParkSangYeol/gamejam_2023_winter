@@ -15,8 +15,10 @@ public class CharacterButton : PuzzleButton
 
     private void OnMouseDown()
     {
+        if(isPuzzleUnavailable<CharacterButtonPuzzle>()) return;
+        
         StartCoroutine(ButtonDown<CharacterButtonPuzzle>());
-
+        PlayEffectSound();
         RequestCheckAnswer<CharacterButtonPuzzle>(text.text);
     }
 }

@@ -9,8 +9,10 @@ public class MazeButton : PuzzleButton
 
     private void OnMouseDown()
     {
+        if(isPuzzleUnavailable<MazePuzzle>()) return;
+        
         StartCoroutine(ButtonDown<MazePuzzle>());
-
+        PlayEffectSound();
         RequestCheckAnswer<MazePuzzle>(key);
     }
 }
