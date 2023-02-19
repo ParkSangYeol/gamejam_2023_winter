@@ -95,6 +95,8 @@ public class FrequencyModuleDisplayScript : Puzzle
         currentIndex = 0;
         tmpText.text = FrequencyList[currentIndex].ToString();
 
+        print("Frequency : " + answerIndex);
+
         CalculateAllottedTime();
     }
 

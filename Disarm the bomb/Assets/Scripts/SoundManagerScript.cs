@@ -28,6 +28,8 @@ public class SoundManagerScript : MonoBehaviour
         audioSource = this.GetComponent<AudioSource>();
     }
 
+    
+
     public void  changeMusicToGameScene()
     {
         audioSource.clip = gameBackgroundMusic;
