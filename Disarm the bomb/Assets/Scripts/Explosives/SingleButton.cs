@@ -23,6 +23,6 @@ public class SingleButton : PuzzleButton
 
         ButtonDown();
         PlayEffectSound();
-        RequestCheckAnswer<SingleButtonPuzzle>("");
+        RequestCheckAnswer<SingleButtonPuzzle>();
     }
 }

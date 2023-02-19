@@ -6,7 +6,7 @@ public class BatteryRandomizer : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> batteries;
-    public int activeBatteryNumber;
+    public static int activeBatteryNumber;
 
     private void Start()
     {

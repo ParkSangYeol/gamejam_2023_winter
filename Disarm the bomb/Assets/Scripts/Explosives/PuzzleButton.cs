@@ -55,7 +55,7 @@ public abstract class PuzzleButton : MonoBehaviour
         }
     }
 
-    protected void RequestCheckAnswer<T>(string value) where T : Puzzle
+    protected void RequestCheckAnswer<T>(string value = "") where T : Puzzle
     {
         GetPuzzle<T>().CheckAnswer(value);
     }
