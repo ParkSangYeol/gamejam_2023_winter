@@ -67,4 +67,14 @@ public class PuzzlePlacer : MonoBehaviour
             Debug.LogError("No Puzzle Component");
         }
     }
+
+    public float getTimerTime()
+    {
+        float ret = 0;
+        foreach (var puzzle in puzzles)
+        {
+            ret += puzzle.GetAllottedTime();
+        }
+        return ret;
+    }
 }

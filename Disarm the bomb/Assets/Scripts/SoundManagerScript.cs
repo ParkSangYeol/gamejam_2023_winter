@@ -12,6 +12,7 @@ public class SoundManagerScript : MonoBehaviour
     private AudioClip mainMenuBackgroundMusic;
     [SerializeField]
     private AudioClip startGameAudioClip;
+    private AudioSource audioSource;
     void Awake()
     {
         if(instance == null)
@@ -24,18 +25,24 @@ public class SoundManagerScript : MonoBehaviour
         }
 
         DontDestroyOnLoad(transform.gameObject);
+        audioSource = this.GetComponent<AudioSource>();
     }
 
     public void  changeMusicToGameScene()
     {
-        this.GetComponent<AudioSource>().clip = gameBackgroundMusic;
-        this.GetComponent<AudioSource>().PlayDelayed(1);
-        this.GetComponent<AudioSource>().PlayOneShot(startGameAudioClip);
+        audioSource.clip = gameBackgroundMusic;
+        audioSource.PlayDelayed(1);
+        audioSource.PlayOneShot(startGameAudioClip);
 
     }
     public void changeMusicToMainMenu()
-    { 
-        this.GetComponent<AudioSource>().clip = mainMenuBackgroundMusic;
-        this.GetComponent<AudioSource>().Play();
+    {
+        audioSource.clip = mainMenuBackgroundMusic;
+        audioSource.Play();
+    }
+
+    public void stopMusic()
+    {
+        audioSource.Stop();
     }
 }
