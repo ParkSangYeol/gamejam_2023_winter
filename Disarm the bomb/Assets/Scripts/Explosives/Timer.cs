@@ -28,16 +28,16 @@ public class Timer : MonoBehaviour
             {
                 sec = '0' + sec;
             }
-            timeText = min + " : " + sec;
+            timeText = min + ":" + sec;
             Debug.Log(timeText);
             m_text.text = timeText;
-            if (!isCountDown && timeText == "0 : 01")
+            if (!isCountDown && timeText == "0:01")
             {
                 isCountDown = true;
                 EffectSoundManager.instance.playBombCountdownAudioClip();
                 Debug.Log("Bomb Explosion");
             }
-            else if (!isExplode && timeText == "0 : 00")
+            else if (!isExplode && timeText == "0:00")
             {
                 isExplode = true;
                 EffectSoundManager.instance.playBombExplosionAudioClip();
