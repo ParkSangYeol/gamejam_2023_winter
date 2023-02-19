@@ -5922,6 +5922,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 474732659582745965}
     m_Modifications:
+    - target: {fileID: 1407581026489590567, guid: 3ae3869c7bc99434ab439b768e7a57d4, type: 3}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 5160584127486427286, guid: 6c891ab4453d93448bc930946993241c, type: 3}
     - target: {fileID: 4321088005379144094, guid: 3ae3869c7bc99434ab439b768e7a57d4, type: 3}
       propertyPath: m_Name
       value: FrequencyModule
@@ -13674,6 +13678,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 474732659582745965}
     m_Modifications:
+    - target: {fileID: 1407581026489590567, guid: 3ae3869c7bc99434ab439b768e7a57d4, type: 3}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 5160584127486427286, guid: 6c891ab4453d93448bc930946993241c, type: 3}
     - target: {fileID: 4321088005379144094, guid: 3ae3869c7bc99434ab439b768e7a57d4, type: 3}
       propertyPath: m_Name
       value: FrequencyModule
