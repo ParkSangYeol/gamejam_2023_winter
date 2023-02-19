@@ -93,7 +93,6 @@ public class WiringPuzzle : Puzzle
             //fail
             print("Fail");
 
-
             solvedPuzzleCount++;
             EffectSoundManager.instance.playWarningAudioClip();
             LEDProgressor.instance.PuzzleFailed();
