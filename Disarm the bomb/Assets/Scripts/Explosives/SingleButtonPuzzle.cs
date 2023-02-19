@@ -64,8 +64,9 @@ public class SingleButtonPuzzle : Puzzle
         {
             // Fail
             print("Fail");
-            
 
+
+            solvedPuzzleCount++;
             EffectSoundManager.instance.playWarningAudioClip();
             LEDProgressor.instance.PuzzleFailed();
         }

@@ -124,7 +124,8 @@ public class FrequencyModuleDisplayScript : Puzzle
             //fail
             print("Fail");
             checkUnavailable = true;
-            
+
+            solvedPuzzleCount++;
             EffectSoundManager.instance.playWarningAudioClip();
             LEDProgressor.instance.PuzzleFailed();
         }

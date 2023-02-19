@@ -115,6 +115,7 @@ public class ColorDisplayPuzzle : Puzzle
             print("Fail");
             checkUnavailable = true;
 
+            solvedPuzzleCount++;
             EffectSoundManager.instance.playWarningAudioClip();
             LEDProgressor.instance.PuzzleFailed();
         }

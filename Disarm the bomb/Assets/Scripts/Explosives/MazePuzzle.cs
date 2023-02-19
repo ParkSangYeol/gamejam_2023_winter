@@ -52,6 +52,7 @@ public class MazePuzzle : Puzzle
         {
             //fail
             print("Fail");
+            solvedPuzzleCount++;
             checkUnavailable = true;
             EffectSoundManager.instance.playWarningAudioClip();
             LEDProgressor.instance.PuzzleFailed();
