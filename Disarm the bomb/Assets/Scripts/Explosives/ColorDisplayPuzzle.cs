@@ -42,7 +42,7 @@ public class ColorDisplayPuzzle : Puzzle
         int randomIndex = Random.Range(0, answerCandidate.Count);
         displayedColorSet = answerCandidate[randomIndex].Item1;
         answer = answerCandidate[randomIndex].Item2;
-        print(answer[0] + " " + answer[1] + " " + answer[2] + " "  + answer[3]);
+        print("Color Display : " + answer[0] + " " + answer[1] + " " + answer[2] + " "  + answer[3]);
         StartCoroutine(ColorChanger());
     }
 

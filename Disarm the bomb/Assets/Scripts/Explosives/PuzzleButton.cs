@@ -9,7 +9,7 @@ public abstract class PuzzleButton : MonoBehaviour
     [SerializeField]
     private Material pressedStateMaterials;
 
-    private T GetPuzzle<T>() where T : Puzzle
+    protected T GetPuzzle<T>() where T : Puzzle
     {
         if(transform.parent.TryGetComponent<T>(out T puzzle))
         {
@@ -22,10 +22,13 @@ public abstract class PuzzleButton : MonoBehaviour
         }
     }
 
+    public bool isPuzzleUnavailable<T>() where T : Puzzle
+    {
+        return GetPuzzle<T>().checkUnavailable;
+    }
+
     protected IEnumerator ButtonDown<T>() where T : Puzzle
     {
-        if(GetPuzzle<T>().checkUnavailable) yield break;
-
         if(gameObject.TryGetComponent<MeshRenderer>(out MeshRenderer mesh))
         {
             mesh.material = pressedStateMaterials;
@@ -55,5 +58,10 @@ public abstract class PuzzleButton : MonoBehaviour
     protected void RequestCheckAnswer<T>(string value) where T : Puzzle
     {
         GetPuzzle<T>().CheckAnswer(value);
+    }
+
+    protected void PlayEffectSound()
+    {
+        EffectSoundManager.instance.playButtonAudioClip();
     }
 }
