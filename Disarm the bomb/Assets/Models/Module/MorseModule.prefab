@@ -556,6 +556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 765011949865228883}
+  - component: {fileID: 5544232736572433163}
   m_Layer: 0
   m_Name: MorseModule
   m_TagString: Untagged
@@ -582,6 +583,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5544232736572433163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765011949865228882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388a35654db958942becdd45f69ec529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkUnavailable: 0
+  indicator: {fileID: 765011949150867303}
 --- !u!1 &765011950035797658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1523,7 @@ GameObject:
   - component: {fileID: 6004932733286415204}
   - component: {fileID: 2899958297557900392}
   - component: {fileID: 53590760797749803}
+  - component: {fileID: 2058247801053429172}
   m_Layer: 0
   m_Name: MorseButtonLong
   m_TagString: Untagged
@@ -1594,6 +1610,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2058247801053429172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295011483328996467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a00991decdbd7c4d899b8f975f1d2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
+  key: 0
 --- !u!1 &2184798368074187252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1738,7 @@ GameObject:
   - component: {fileID: 5386031437543748878}
   - component: {fileID: 2568182667354059647}
   - component: {fileID: 5134611240828684699}
+  - component: {fileID: 1537156936264745818}
   m_Layer: 0
   m_Name: MorseButtonShort
   m_TagString: Untagged
@@ -1793,6 +1825,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1537156936264745818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248238201637867583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a00991decdbd7c4d899b8f975f1d2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
+  key: 1
 --- !u!1 &5527630261773447787
 GameObject:
   m_ObjectHideFlags: 0
