@@ -29,7 +29,6 @@ public class Timer : MonoBehaviour
                 sec = '0' + sec;
             }
             timeText = min + ":" + sec;
-            Debug.Log(timeText);
             m_text.text = timeText;
             if (!isCountDown && timeText == "0:01")
             {
@@ -39,15 +38,7 @@ public class Timer : MonoBehaviour
             }
             else if (!isExplode && timeText == "0:00")
             {
-                isExplode = true;
-                EffectSoundManager.instance.playBombExplosionAudioClip();
-                ParticleSystem[] particles = effectObject.GetComponentsInChildren<ParticleSystem>();
-                foreach (var particle in particles)
-                {
-                    particle.Play();
-                }
-                GameObject.Find("Directional Light").GetComponent<Light>().enabled = false;
-                SoundManagerScript.instance.stopMusic();
+                ExplodeBomb();
             }
         }
     }
@@ -55,5 +46,18 @@ public class Timer : MonoBehaviour
     public string getTime()
     {
         return timeText;
+    }
+
+    public void ExplodeBomb()
+    {
+        isExplode = true;
+        EffectSoundManager.instance.playBombExplosionAudioClip();
+        ParticleSystem[] particles = effectObject.GetComponentsInChildren<ParticleSystem>();
+        foreach (var particle in particles)
+        {
+            particle.Play();
+        }
+        GameObject.Find("Directional Light").GetComponent<Light>().enabled = false;
+        SoundManagerScript.instance.stopMusic();
     }
 }
