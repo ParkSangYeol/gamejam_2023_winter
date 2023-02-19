@@ -20,6 +20,8 @@ public class EffectSoundManager : MonoBehaviour
     private AudioClip bombCountAudioClip;
     [SerializeField]
     private AudioClip BombExplosionAudioClip;
+    [SerializeField]
+    private AudioClip endingAudioClip;
 
     private AudioSource m_audioSource;
     void Awake()
@@ -69,6 +71,11 @@ public class EffectSoundManager : MonoBehaviour
     public void playBombExplosionAudioClip()
     {
         m_audioSource.clip = BombExplosionAudioClip;
+        m_audioSource.Play();
+    }
+    public void playEndingAudioClip()
+    {
+        m_audioSource.clip = endingAudioClip;
         m_audioSource.Play();
     }
 }

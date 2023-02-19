@@ -66,4 +66,10 @@ public class Timer : MonoBehaviour
     {
         fastFactor = 1.5f;
     }
+    public void stopTimer()
+    {
+        isExplode = true;
+        SoundManagerScript.instance.stopMusic();
+        EffectSoundManager.instance.playEndingAudioClip();
+    }
 }
