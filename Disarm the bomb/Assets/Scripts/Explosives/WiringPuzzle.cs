@@ -93,9 +93,9 @@ public class WiringPuzzle : Puzzle
             //fail
             print("Fail");
             
-            LEDProgressor.instance.PuzzleFailed();
 
             EffectSoundManager.instance.playWarningAudioClip();
+            LEDProgressor.instance.PuzzleFailed();
         }
         checkUnavailable = true;
     }

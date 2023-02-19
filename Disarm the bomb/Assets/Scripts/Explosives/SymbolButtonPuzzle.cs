@@ -83,9 +83,9 @@ public class SymbolButtonPuzzle : Puzzle
             print("Fail");
             checkUnavailable = true;
 
-            LEDProgressor.instance.PuzzleFailed();
 
             EffectSoundManager.instance.playWarningAudioClip();
+            LEDProgressor.instance.PuzzleFailed();
         }
     }
 }
