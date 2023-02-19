@@ -7,13 +7,18 @@ public class CameraScript : MonoBehaviour
     private float cameraSize;
     private float px;
     private float pz;
-    private float wheelSpeed = 1f;
+    private float wheelSpeed = 2f;
+    public float SmoothTime = 0.1f;
+
+    private Vector3 velocity = Vector3.zero;
+    private Transform m_transform;
     private Camera m_camera;
     // Start is called before the first frame update
     void Start()
     {
         cameraSize = 6;
-        this.GetComponent<Transform>().position = new Vector3(5,11,0);
+        m_transform = this.GetComponent<Transform>();
+        m_transform.position = new Vector3(5,11,0);
         px = 5;
         pz = 0;
         m_camera = this.GetComponent<Camera>();
@@ -33,11 +38,27 @@ public class CameraScript : MonoBehaviour
         }
         m_camera.orthographicSize = cameraSize;
 
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButton(1))
         {
-            px += Input.GetAxis("Mouse X");
-            pz -= Input.GetAxis("Mouse Y");
-            transform.rotation = Quaternion.Euler(ymove, xmove, 0);
+            px += Input.GetAxis("Mouse X") * SmoothTime;
+            pz += Input.GetAxis("Mouse Y") * SmoothTime;
+            if (px > 15)
+            {
+                px = 15;
+            }
+            else if (px < -5)
+            {
+                px = -5;
+            }
+            if (pz > 5)
+            {
+                pz = 5;
+            }
+            else if (pz < -5)
+            {
+                pz = -5;
+            }
+            m_transform.position = Vector3.Lerp(m_transform.position, new Vector3(px,11,pz), SmoothTime);
         }
     }
 }
