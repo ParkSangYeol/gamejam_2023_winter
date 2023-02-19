@@ -46,6 +46,8 @@ public class SymbolButtonPuzzle : Puzzle
         selectedString = CharactersByGroup[randomGroupIndex];
         answer.Sort();
 
+        print("Symbol : " + selectedString[answer[0]] + selectedString[answer[1]] + selectedString[answer[2]] + selectedString[answer[3]]);
+
         CalculateAllottedTime();
     }
 
@@ -68,6 +70,8 @@ public class SymbolButtonPuzzle : Puzzle
                 // clear
                 print("Clear");
                 checkUnavailable = true;
+                
+                solvedPuzzleCount++;
             }
         }
         else

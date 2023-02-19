@@ -13,7 +13,8 @@ public class PuzzlePlacer : MonoBehaviour
     private List<GameObject> chipModules;
     [SerializeField]
     private List<GameObject> lineModules;
-    private List<Puzzle> puzzles = new List<Puzzle>();
+    private static List<Puzzle> puzzles = new List<Puzzle>();
+    public static int GetPuzzleCount() { return puzzles.Count; }
 
     private void Start()
     {
@@ -76,5 +77,10 @@ public class PuzzlePlacer : MonoBehaviour
             ret += puzzle.GetAllottedTime();
         }
         return ret;
+    }
+
+    ~PuzzlePlacer()
+    {
+        puzzles.Clear();
     }
 }

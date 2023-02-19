@@ -31,7 +31,7 @@ public class CharacterButtonPuzzle : Puzzle
         {
             buttons[i].PutText(shuffledString[i].ToString());
         }
-        print(answerSet.Item1);
+        print("Character : " + answerSet.Item1);
 
         CalculateAllottedTime();
     }
@@ -66,6 +66,8 @@ public class CharacterButtonPuzzle : Puzzle
                 // clear
                 print("Clear");
                 checkUnavailable = true;
+
+                solvedPuzzleCount++;
             }
         }
         else

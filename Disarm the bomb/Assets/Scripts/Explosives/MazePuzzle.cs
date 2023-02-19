@@ -20,7 +20,7 @@ public class MazePuzzle : Puzzle
         int randomFigureIndex = Random.Range(0, figures.Count);
         image.sprite = figures[randomFigureIndex];
         answer = DicForAnswer[figures[randomFigureIndex].name];
-        print(answer);
+        print("Maze : " + answer);
 
         CalculateAllottedTime();
     }
@@ -43,6 +43,8 @@ public class MazePuzzle : Puzzle
                 // clear
                 print("Clear");
                 checkUnavailable = true;
+                
+                solvedPuzzleCount++;
             }
         }
         else

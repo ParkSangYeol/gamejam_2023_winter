@@ -37,8 +37,9 @@ public class SingleButtonPuzzle : Puzzle
         }
         if(targetNumber == -1) return;
 
+        print("Single Btn : " + targetNumber);
+
         CalculateAllottedTime();
-        return;
     }
 
     protected override void CalculateAllottedTime()
@@ -49,10 +50,12 @@ public class SingleButtonPuzzle : Puzzle
     public override void CheckAnswer(string text = "")
     {
         string timeText = timer.getTime();
-        if(timeText.Contains(targetNumber.ToString()))
+        if(timeText.Contains(targetNumber.ToString()) && solvedPuzzleCount == PuzzlePlacer.GetPuzzleCount() - 1)
         {
             // Clear
             print("CLear");
+
+            solvedPuzzleCount++;
         }
         else
         {
