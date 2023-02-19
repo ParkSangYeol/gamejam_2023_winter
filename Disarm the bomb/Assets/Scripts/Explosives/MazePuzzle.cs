@@ -15,8 +15,6 @@ public class MazePuzzle : Puzzle
     [SerializeField]
     private Image image;
     private string answer;
-    public bool checkUnavailable = false;
-
     public override void PuzzleInit()
     {
         int randomFigureIndex = Random.Range(0, figures.Count);
@@ -29,7 +27,7 @@ public class MazePuzzle : Puzzle
     {
     }
 
-    public void CheckAnswer(string key)
+    public override void CheckAnswer(string key)
     {
         if(checkUnavailable) return;
         

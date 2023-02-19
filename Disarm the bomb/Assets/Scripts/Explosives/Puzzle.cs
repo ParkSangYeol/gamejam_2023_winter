@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Puzzle : MonoBehaviour
 {
     protected float allottedTime;
+    public bool checkUnavailable = false;
 
     protected abstract void CalculateAllottedTime();
 
@@ -14,4 +15,6 @@ public abstract class Puzzle : MonoBehaviour
     }
 
     public abstract void PuzzleInit();
+
+    public abstract void CheckAnswer(string text);
 }

@@ -2,20 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeButton : MonoBehaviour
+public class MazeButton : PuzzleButton
 {
     [SerializeField]
     private string key;
 
     private void OnMouseDown()
     {
-        if(transform.parent.TryGetComponent<MazePuzzle>(out MazePuzzle puzzle))
-        {
-            puzzle.CheckAnswer(key);
-        }
-        else
-        {
-            Debug.LogError("Parent has no MazePuzzle Component!");
-        }
+        StartCoroutine(ButtonDown<MazePuzzle>());
+
+        RequestCheckAnswer<MazePuzzle>(key);
     }
 }

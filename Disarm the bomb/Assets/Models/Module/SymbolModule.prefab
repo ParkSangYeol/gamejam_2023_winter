@@ -212,6 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce8f9f3fc9caf7498b9b9b6d0a999fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
   text: {fileID: 9073349533810408616}
 --- !u!1 &813295072665024604
 GameObject:
@@ -594,6 +596,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce8f9f3fc9caf7498b9b9b6d0a999fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
   text: {fileID: 6764667483823146742}
 --- !u!1 &1774961107990260893
 GameObject:
@@ -643,12 +647,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462d7719fb378864fb4cc0f01c9a18f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkUnavailable: 0
   texts:
   - {fileID: 9073349533810408616}
   - {fileID: 6764667483823146742}
   - {fileID: 3689173269816027961}
   - {fileID: 1138973230633354075}
-  checkUnavailable: 0
 --- !u!1 &1838130101160701657
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce8f9f3fc9caf7498b9b9b6d0a999fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
   text: {fileID: 3689173269816027961}
 --- !u!1 &3020786659431066274
 GameObject:
@@ -1209,6 +1215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce8f9f3fc9caf7498b9b9b6d0a999fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
   text: {fileID: 1138973230633354075}
 --- !u!1 &7522167037694844555
 GameObject:

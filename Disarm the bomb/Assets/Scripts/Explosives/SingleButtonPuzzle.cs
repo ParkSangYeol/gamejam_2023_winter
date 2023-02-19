@@ -12,4 +12,9 @@ public class SingleButtonPuzzle : Puzzle
     protected override void CalculateAllottedTime()
     {
     }
+
+    public override void CheckAnswer(string text)
+    {
+        throw new System.NotImplementedException();
+    }
 }

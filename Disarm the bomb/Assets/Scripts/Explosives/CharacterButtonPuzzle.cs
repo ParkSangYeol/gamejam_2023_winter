@@ -20,7 +20,6 @@ public class CharacterButtonPuzzle : Puzzle
     private List<CharacterButton> buttons = new List<CharacterButton>();
     private (string, string) answerSet;
     private string answer;
-    public bool checkUnavailable = false;
 
     public override void PuzzleInit()
     {
@@ -52,7 +51,7 @@ public class CharacterButtonPuzzle : Puzzle
         return ret;
     }
 
-    public void CheckAnswer(string text)
+    public override void CheckAnswer(string text)
     {
         if(checkUnavailable) return;
         

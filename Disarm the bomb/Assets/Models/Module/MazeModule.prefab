@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05da6f22eae576e45b1b1e8d5a049c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkUnavailable: 0
   figures:
   - {fileID: 21300000, guid: dddff9db230bcf34f9a64f8efa7c4ae4, type: 3}
   - {fileID: 21300000, guid: 0b84b609b52610b4db9feb209130a8a7, type: 3}
@@ -195,7 +196,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 88f7cd4f9f39cd54484f92c5a8e60526, type: 3}
   - {fileID: 21300000, guid: 4809e223ae6a9f245a484284ada8343a, type: 3}
   image: {fileID: 7836857250834475511}
-  checkUnavailable: 0
 --- !u!1 &644132550004158340
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9920cd044ee590f418cb1992ba730ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
   key: l
 --- !u!1 &2431353221855597706
 GameObject:
@@ -1442,6 +1444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9920cd044ee590f418cb1992ba730ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
   key: u
 --- !u!1 &6311773008505867015
 GameObject:
@@ -1891,6 +1895,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9920cd044ee590f418cb1992ba730ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
   key: r
 --- !u!1 &7293015013420664225
 GameObject:
@@ -2104,6 +2110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9920cd044ee590f418cb1992ba730ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalStateMaterials: {fileID: 2100000, guid: 139644374bfc56e4180c0961ab70859c, type: 2}
+  pressedStateMaterials: {fileID: 2100000, guid: cd5181203c379b94d82899cbfe075346, type: 2}
   key: d
 --- !u!1 &7670743198636545729
 GameObject:

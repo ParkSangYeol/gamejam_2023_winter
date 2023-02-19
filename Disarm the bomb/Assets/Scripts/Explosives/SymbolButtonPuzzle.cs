@@ -15,8 +15,6 @@ public class SymbolButtonPuzzle : Puzzle
     private List<TMP_Text> texts;
 
     private List<int> answer = new List<int>();
-    public bool checkUnavailable = false;
-
     public override void PuzzleInit()
     {
         // choose answer
@@ -54,7 +52,7 @@ public class SymbolButtonPuzzle : Puzzle
         allottedTime = 30f + levelSum * 5f;
     }
 
-    public void CheckAnswer(string text)
+    public override void CheckAnswer(string text)
     {
         if(checkUnavailable) return;
 

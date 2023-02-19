@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CharacterButton : MonoBehaviour
+public class CharacterButton : PuzzleButton
 {
     [SerializeField]
     private TMP_Text text;
@@ -15,13 +15,8 @@ public class CharacterButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(transform.parent.TryGetComponent<CharacterButtonPuzzle>(out CharacterButtonPuzzle puzzle))
-        {
-            puzzle.CheckAnswer(text.text);
-        }
-        else
-        {
-            Debug.LogError("Parent has no SymbolButtonPuzzle Component!");
-        }
+        StartCoroutine(ButtonDown<CharacterButtonPuzzle>());
+
+        RequestCheckAnswer<CharacterButtonPuzzle>(text.text);
     }
 }
