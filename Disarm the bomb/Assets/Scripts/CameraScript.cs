@@ -28,9 +28,9 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         cameraSize -= Input.GetAxis("Mouse ScrollWheel") * wheelSpeed;
-        if (cameraSize < 2)
+        if (cameraSize < 1)
         {
-            cameraSize = 2;
+            cameraSize = 1;
         }
         else if (cameraSize > 9) 
         {
