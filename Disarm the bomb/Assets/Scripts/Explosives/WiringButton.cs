@@ -36,5 +36,7 @@ public class WiringButton : PuzzleButton
 
         PlayEffectSound();
         RequestCheckAnswer<WiringPuzzle>(key);
+
+        Destroy(gameObject);
     }
 }
