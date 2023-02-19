@@ -115,12 +115,16 @@ public class FrequencyModuleDisplayScript : Puzzle
             checkUnavailable = true;
 
             solvedPuzzleCount++;
+            
+            LEDProgressor.instance.PuzzleSolved();
         }
         else
         {
             //fail
             print("Fail");
             checkUnavailable = true;
+            
+            LEDProgressor.instance.PuzzleFailed();
         }
     }
 }
