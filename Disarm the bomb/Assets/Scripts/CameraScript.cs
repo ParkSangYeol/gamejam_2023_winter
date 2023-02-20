@@ -58,7 +58,7 @@ public class CameraScript : MonoBehaviour
             {
                 pz = -5;
             }
-            m_transform.position = Vector3.Lerp(m_transform.position, new Vector3(px,11,pz), SmoothTime);
+            m_transform.position = Vector3.SmoothDamp(m_transform.position, new Vector3(px,11,pz), ref velocity, 0.01f);
         }
     }
 }
