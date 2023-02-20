@@ -15,13 +15,14 @@ public class SoundManagerScript : MonoBehaviour
     private AudioSource audioSource;
     void Awake()
     {
-        if(instance == null)
+        if(instance != null && instance != this)
         {
-            instance = this;
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(this);
+            instance = this;
+            
         }
 
         DontDestroyOnLoad(transform.gameObject);

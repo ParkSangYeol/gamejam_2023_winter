@@ -14,7 +14,7 @@ public class SingleButtonPuzzle : Puzzle
 
     public override void PuzzleInit()
     {
-        switch(BatteryRandomizer.activeBatteryNumber)
+        switch (BatteryRandomizer.activeBatteryNumber)
         {
             case 0:
                 targetNumber = 0;
@@ -50,7 +50,9 @@ public class SingleButtonPuzzle : Puzzle
     public override void CheckAnswer(string text = "")
     {
         string timeText = timer.getTime();
-        if(timeText.Contains(targetNumber.ToString()) && solvedPuzzleCount == PuzzlePlacer.GetPuzzleCount() - 1)
+        print(timeText.Contains(targetNumber.ToString()) + " " + targetNumber.ToString() + " " + timeText);
+        print(solvedPuzzleCount + " " + (PuzzlePlacer.GetPuzzleCount() - 1));
+        if (timeText.Contains(targetNumber.ToString()) && solvedPuzzleCount == PuzzlePlacer.GetPuzzleCount() - 1)
         {
             // Clear
             print("CLear");

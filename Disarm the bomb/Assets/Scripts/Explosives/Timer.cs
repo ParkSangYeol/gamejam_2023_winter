@@ -6,6 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     private float time;
+    private float defaultTime;
     private float fastFactor;
     private string timeText;
     private TMP_Text m_text;
@@ -14,7 +15,7 @@ public class Timer : MonoBehaviour
     private bool isExplode = false;
     private void Start()
     {
-        time = GameObject.Find("PuzzlePlacer").GetComponent<PuzzlePlacer>().getTimerTime();
+        defaultTime = time = GameObject.Find("PuzzlePlacer").GetComponent<PuzzlePlacer>().getTimerTime();
         m_text = GameObject.Find("Rectangle0/Canvas/Text (TMP)").GetComponent<TMP_Text>();
         effectObject = GameObject.Find("ExplosionImpact");
         fastFactor = 1f;
@@ -66,10 +67,15 @@ public class Timer : MonoBehaviour
     {
         fastFactor = 1.5f;
     }
-    public void stopTimer()
+    public int stopTimer()
     {
         isExplode = true;
         SoundManagerScript.instance.stopMusic();
         EffectSoundManager.instance.playEndingAudioClip();
+        return getResultTime();
+    }
+    public int getResultTime()
+    {
+        return ((int)(defaultTime - time));
     }
 }

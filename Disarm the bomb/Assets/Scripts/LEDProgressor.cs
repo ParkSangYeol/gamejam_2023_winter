@@ -12,7 +12,7 @@ public class LEDProgressor : MonoBehaviour
     private Material greenLEDMaterial;
     [SerializeField]
     private Material redLEDMaterial;
-
+    private int numOfCorrectAnswer;
     private void Start()
     {
         if(instance != null && instance != this)
@@ -23,19 +23,20 @@ public class LEDProgressor : MonoBehaviour
         {
             instance = this;
         }
+        numOfCorrectAnswer = 0;
     }
 
     public void PuzzleSolved()
     {
         LEDs[0].transform.GetChild(2).GetComponent<MeshRenderer>().material = greenLEDMaterial;
         LEDs.RemoveAt(0);
-
+        numOfCorrectAnswer++;
         if(LEDs.Count == 0)
         {
             // Game Win
             print("Game Win!!!!");
             // GameObject.Find("TNT/circuitboard/timer display").GetComponent<Timer>().stopTimer();
-            GameObject.Find("EndingCanvas").GetComponent<EndingPanelSwitcher>().TurnClearPanelOn();
+            GameObject.Find("EndingCanvas").GetComponent<EndingPanelSwitcher>().TurnClearPanelOn(numOfCorrectAnswer);
         }
     }
 
@@ -47,7 +48,14 @@ public class LEDProgressor : MonoBehaviour
         {
             // bomb
             GameObject.Find("TNT/circuitboard/timer display").GetComponent<Timer>().ExplodeBomb();
-            GameObject.Find("EndingCanvas").GetComponent<EndingPanelSwitcher>().TurnFailPanelOn();
+            GameObject.Find("EndingCanvas").GetComponent<EndingPanelSwitcher>().TurnFailPanelOn(numOfCorrectAnswer);
+        }
+        else if (LEDs.Count == 1)
+        {
+            // Game Win
+            print("Game Win!!!!");
+            // GameObject.Find("TNT/circuitboard/timer display").GetComponent<Timer>().stopTimer();
+            GameObject.Find("EndingCanvas").GetComponent<EndingPanelSwitcher>().TurnClearPanelOn(7);
         }
         LEDs.RemoveAt(LEDs.Count - 1);
     }

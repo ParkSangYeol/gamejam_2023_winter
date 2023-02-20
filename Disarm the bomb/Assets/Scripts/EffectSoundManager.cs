@@ -26,13 +26,14 @@ public class EffectSoundManager : MonoBehaviour
     private AudioSource m_audioSource;
     void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
         {
-            instance = this;
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(this);
+            instance = this;
+
         }
 
         DontDestroyOnLoad(transform.gameObject);

@@ -8,7 +8,7 @@ public class BatteryRandomizer : MonoBehaviour
     private List<GameObject> batteries;
     public static int activeBatteryNumber;
 
-    private void Start()
+    private void Awake()
     {
         activeBatteryNumber = Random.Range(0, 5);
         for(int i = 4; i > activeBatteryNumber; i--)
